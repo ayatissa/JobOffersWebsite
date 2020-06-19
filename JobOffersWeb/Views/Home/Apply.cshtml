@@ -1,0 +1,48 @@
+﻿
+
+@{
+    ViewBag.Title = "Apply";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2 style="margin-top:150px">Apply</h2>
+
+<div>
+    @{ 
+        if (ViewBag.Result != null)
+        {
+            <h3>@ViewBag.Result </h3>
+        }
+    }
+</div>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ApplyForJob</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("Message", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextArea("Message", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessage("Message", "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="تاكيد" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

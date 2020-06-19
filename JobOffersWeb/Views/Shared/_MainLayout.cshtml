@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+   
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div>
+        <!--navbar-->
+
+        <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:150px">
+            <div class="container">
+                <div class=" navbar-header">
+                    <button class=" navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"> </span>
+                        <span class="icon-bar"> </span>
+                        <span class="icon-bar"> </span>
+
+                    </button>
+
+                    <a href="~/Home" class="navbar-brand">
+
+
+                        <img class="logoImg" src="~/Img/logojob.PNG" />
+                    </a>
+                </div>
+                <div id="navbar" class=" navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="~/Home">
+                                <i class="glyphicon glyphicon-home"></i>
+                                الرئسية
+                            </a>
+
+                        </li>
+
+
+
+                        <li>
+                            <a href="~/Home/About">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                                حول الموقع
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="~/Home/Contact">
+                                <i class="glyphicon glyphicon-envelope"> </i>
+                                اتصل بنا
+                            </a>
+
+                        </li>
+
+                        <li>
+                            @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                            {
+                                <input type="text" name="searchName" id="searchName" placeholder="ابحث هنا.. " />
+
+                            }
+
+
+                        </li>
+                    </ul>
+                    <!--    Partial  _Login -->
+
+                    @Html.Partial("_Login") ;
+                  
+
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="container">
+            <div class="row" style="min-height:550px; margin-top:65px">
+
+                @RenderBody()
+            </div>
+        </div>
+        <!--footer-->
+
+        <footer style="margin-bottom:0px" class="myfooter">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                            من نحن؟
+                        </h3>
+                        <p>
+                            شبكة وظيفية الكترونية تخدم منطقة الشرق الأوسط وشمال إفريقيا.
+                            كموقع توظيف،
+                            تعمل أخطبوط كمنصة للربط ما بين الشركات الراغبة بالتوظيف والباحثين عن عمل المؤهلين.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-globe"></i>
+                            روابط هامة
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    وظائف للقطاع العام
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    وظائف للقطاع الخاص
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    وظائف للقطاع خارج البلاد
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    وظائف للقطاع متنوعة
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-envelope"> </i>
+                            تواصل معنا
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    صفحتنا على الفيس بوك
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    تابعنا على تويتر
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    شاهدنا عى اليوتيوب
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    اترك لنا رسالة
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="subfooter">
+                <span>
+                    جميع الحقوق محفوظة لموقع التوظيف 2019
+                </span>
+            </div>
+        </footer>
+
+        <script src="~/Script/jquery.js"></script>
+        <script src="~/Scripts/jquery-3.4.1.js"></script>
+      
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>

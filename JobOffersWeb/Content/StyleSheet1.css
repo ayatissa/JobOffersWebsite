@@ -1,0 +1,114 @@
+﻿body {
+    
+   /* padding-top: 100px;*/
+   font-family:myFont2;
+   
+} 
+
+    @font-face {
+        font-family: myFont;
+        src: url('font/GE_SS_Two_Bold.otf') format('opentype');
+    }
+
+    @font-face {
+        font-family: myFont2;
+        src: url('font/DroidKufi-Regular.ttf') format('truetype');
+    }
+
+    .navbar-default {
+    background-color: #14597b;
+    border-color: #e7e7e7;
+    
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+    height: 75px;
+    padding-top: 10px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #f3eded;
+    font-family:myFont;
+}
+
+    .navbar-default .navbar-nav > li > a:hover{
+        color: #808080;
+        font-family: myFont;
+    }
+
+    .myfooter{
+        background-color:cornflowerblue;
+        padding-top:10px;
+        font-family:myFont;
+        text-align:justify;
+       margin-top:0px;
+    }
+
+.subfooter {
+    background-color: #14597b;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+ .myfooter a {
+     color:azure;
+ }
+
+.myfooter p {
+    color: azure;
+}
+
+ .myfooter h3,ul, p{
+     margin-bottom:20px;
+     font-family:myFont2;
+ }
+
+.navbar-header img {
+    width: 120px;
+    height:55px;
+    border :2px solid #f3eded;
+    border-radius:10px;
+    margin-top:-5px;
+}
+
+.form-control {
+    display: block;
+    width: 50%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+
+
+#searchName{
+    width:130px;
+    border:2px solid #ccc;
+    border-radius:2px;
+    background-color :white;
+    padding:5px 20px 5px 12px;
+    margin-top:10px;
+    transition:width 0.4s ease-in-out;
+
+}
+#searchName:focus{
+    width:100%;
+
+}
+
+.img-size{
+    font-size:90px;
+}
+
+.navbar-user{
+    padding:10px;
+    padding-bottom:0px;
+    width:350px;
+
+}
